@@ -1,0 +1,120 @@
+.navbar{
+    background-color: rgb(255, 255, 255);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 1px 5px rgb(180, 180, 180);
+
+
+    .wrapper{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex: 1;
+        padding: 10px 20px;
+
+        .search{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 2px;
+            padding: 3px;
+            border: 2px solid gray;
+            border-radius: 25px;
+
+            input{
+                width: 300px;
+                border: none;
+                outline: none;
+                background-color:transparent;
+                color: gray;
+                padding: 4px 8px;
+                font-size: 14px;
+
+                &::placeholder{
+                    color: gray;
+                    font-size: 14px;
+                }
+            }
+
+            .icon{
+                font-size: 20px;
+                color: rgba(0, 0, 107, 0.8);
+                cursor: pointer;
+            }
+        }
+
+        .items{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 12px;
+
+            .item{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                padding: 4px;
+                border-radius: 8px;
+                
+                &:hover{
+                    background-color:rgba(0, 0, 107, 0.4);
+                }
+
+                &:nth-last-child(1){
+                    background-color: transparent;  
+                }
+                
+                &:nth-last-child(2){
+                    background-color: transparent;  
+                }
+                
+                .icon{
+                    font-size: 20px;
+                    color: rgba(0, 0, 107, 0.8);
+                    cursor: pointer;
+                }
+
+                .counter{
+                    width: 15px;
+                    height: 15px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: rgb(255, 58, 58);
+                    border-radius: 5px;
+                    font-size: 8px;
+                    font-weight: 900;
+                    color: white;
+                    z-index: 100;
+                    position: absolute;
+                    top: -8px;
+                    right: -8px;
+                }
+
+                .avatar{
+                    width: 40px;
+                    height: 40px;
+                    border: 1px solid gray;
+                    border-radius: 10px;
+                    object-fit: cover;
+                    cursor: pointer;
+                }
+
+                h5{
+                    align-self: self-start;
+                    font-size: 12px;
+                    text-transform: capitalize;
+                }
+
+                p{
+                    align-self: self-start;
+                    font-size: 12px;
+                    font-style: italic;
+                }
+            }
+        }
+    }
+}

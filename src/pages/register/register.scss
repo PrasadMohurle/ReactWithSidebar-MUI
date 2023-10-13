@@ -1,0 +1,169 @@
+.register{
+    width: 100vw;
+    height: 100vh;
+    padding: 20px;
+    background-image: url('../../assets/images/oil_pumping.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    .register-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50vw;
+        height: calc(100vh - 40px); // this px value is of .register's padding multiplied by 2
+        border-radius: 10px;
+        background-color: rgba(245, 245, 245);
+        border-bottom: 3px solid white;
+        border-right: 3px solid white;
+        position: relative;
+    
+        .title{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            margin: 40px 0px;
+            font-family: Montserrat;
+            font-size: 50px;
+            font-weight: 800;
+            letter-spacing: 5px;
+            color: rgba(236, 81, 120, 1);
+        }
+
+        .errmsg {
+            position: absolute;
+            bottom: 80px;
+            color: red;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .offscreen {
+            position: absolute;
+            left: -9999px;
+        }
+
+        .register-form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin-top: 20px;
+
+            .form-input{
+                display: flex;
+                flex-direction: column;
+                width: 400px;
+
+                label{
+                    font-size: 18px;
+                    font-weight: 300;
+                    letter-spacing: 2px;
+                    padding-left: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .hide {
+                        display: none;
+                    }
+                      
+                    .valid {
+                        color: limegreen;
+                        margin-left: 0.25rem;
+                        margin-top: 0.1rem;
+                    }
+                      
+                    .invalid {
+                        color: red;
+                        margin-left: 0.25rem;
+                        margin-top: 0.1rem;
+                    }
+                }
+
+                input{
+                    width: 100%;
+                    height: 40px;
+                    padding: 5px 10px;
+                    outline: none;
+                    border: none;
+                    font-size: 16px;
+                    letter-spacing: 2px;
+                    border-bottom: 2px solid gray;
+                    background-color: transparent;
+
+                    &::placeholder{
+                        text-transform: capitalize;
+                        font-size: 14px;
+                        color: rgb(183, 183, 183);
+                    }
+                }
+
+                .instructions {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-size: 0.75rem;
+                    border-radius: 0.5rem;
+                    background: gray;
+                    color: #fff;
+                    padding: 0.25rem;
+                    position: relative;
+                    bottom: -10px;
+                    margin-bottom: 10px;
+                    
+                    .info-icon{
+                        color: rgb(255, 255, 255);
+                    }
+                }
+                
+            }
+
+            button{
+                width: 400px;
+                height: 40px;
+                border-radius: 5px;
+                font-family: Montserrat;
+                font-size: 16px;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: white;
+                border: 1px solid rgba(236, 81, 120);
+                background-color: rgba(236, 81, 120, 0.6);
+                cursor: pointer;
+                margin-top: 20px;
+    
+                &:hover{
+                    color: white;
+                    background-color: rgba(236, 81, 120);
+                    border: none;
+                }
+            }
+        }
+
+        p{
+            position: absolute;
+            bottom: 50px;
+            color: gray;
+
+            a{
+                text-decoration:none;
+                font-style: italic;
+                color: gray;
+
+                &:hover{
+                    color: rgba(236, 81, 120);
+                }
+            }
+        }
+    }
+
+}
