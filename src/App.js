@@ -12,10 +12,12 @@ import Dashboard from './pages/dashboard/Dashboard';
 //  visualisation
 import VisualisationDaily from './pages/visualisation/daily/VisualistionDaily';
 import VisualisationHourly from './pages/visualisation/hourly/VisualistionHourly';
+import ExcelReport from './pages/visualisation/excelReport/ExcelReport';
 import Analytics from './pages/visualisation/analytics/Analytics';
 //  schedule
-import ScheduleDaily from './pages/schedule/daily/ScheduleDaily';
-import ScheduleHourly from './pages/schedule/hourly/ScheduleHourly';
+import Plan from './pages/schedule/plan/Plan';
+import PlanVersion from './pages/schedule/planVersion/PlanVersion';
+import RunSchedule from './pages/schedule/runSchedule/RunSchedule';
 //  pipeline
 import PipelineBranchDetails from './pages/masterData/pipeline/pipelineBranchDetails/PipelineBranchDetails';
 import PipelineBranchPlugQuantity from './pages/masterData/pipeline/pipelineBranchPlugQuantity/PipelineBranchPlugQuantity';
@@ -24,6 +26,7 @@ import ProductCoastalSchedules from './pages/masterData/products/productCoastalS
 import ProductDemandDetail from './pages/masterData/products/productDemandDetail/ProductDemandDetail';
 //  data from ASSETS folder
 import { userInputs } from './assets/data/formSource';
+import CoreDataTable from './components/commonComponents/CoreDataTable/CoreDataTable';
 
 function App() {
     
@@ -37,6 +40,8 @@ function App() {
                     <Route exact path="/" element={<Home />} />
                     <Route exact path="login" element={!isAuthenticated ? ( <Login setAuth={setAuth} />) : (<Navigate to="/dashboard" />)} />
                     <Route exact path="register" element={!isAuthenticated ? ( <Register setAuth={setAuth} />) : (<Navigate to="/login" />)} />
+                    <Route exact path="/core-data-table" element={<CoreDataTable />} />
+
 
                     <Route exact path="dashboard">
                       <Route index element={<Dashboard setAuth={setAuth}/>} />
@@ -48,16 +53,17 @@ function App() {
                       </Route>
 
                       <Route exact path="visualisation">
-                          <Route index element={<VisualisationDaily />} />
-                          <Route path="daily" element={<VisualisationDaily />} />
+                          <Route index element={<VisualisationDaily setAuth={setAuth}/>} />
+                          <Route path="daily" element={<VisualisationDaily setAuth={setAuth}/>} />
                           <Route path="hourly" element={<VisualisationHourly />}/>
+                          <Route path="excel" element={<ExcelReport setAuth={setAuth}/>}/>
                           <Route path="analytics" element={<Analytics />}/>
                       </Route>
 
                       <Route exact path="schedule">
-                          <Route index element={<ScheduleDaily />} />
-                          <Route path="daily" element={<ScheduleDaily />} />
-                          <Route path="hourly" element={<ScheduleHourly />}/>
+                            <Route path="plan" element={<Plan />} />
+                            <Route path="plan_version" element={<PlanVersion />}/>
+                            <Route path="run_schedule" element={<RunSchedule />}/>
                       </Route>
 
                       <Route exact path="masterData">

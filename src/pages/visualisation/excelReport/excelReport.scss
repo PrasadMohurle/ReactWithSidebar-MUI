@@ -1,0 +1,42 @@
+.excel-report{
+    display: flex;
+    min-height: 100vh;
+ 
+    .excel-report-container{
+       flex: 8;
+       max-height: 100vh;
+
+       .title{
+            padding: 15px 20px;
+            border-radius: 5px;
+            // box-shadow: 2px 2px 5px rgb(213, 213, 213);
+            // margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        
+            h1{
+                font-size: 16px;
+                font-weight: 600;
+                color: gray;
+                text-transform: uppercase;
+            }
+
+            .excel-download{
+                font-size: 16px;
+                text-decoration: none;
+                border: none;
+                padding: 5px 10px;
+                border-radius: 5px;
+                color: rgb(74, 149, 0);
+                background-color: rgba(133, 255, 11, 0.5);
+                cursor: pointer;
+    
+                &:hover{
+                    color: white;
+                    background-color: rgba(0, 128, 0, 0.7);
+                }
+            }
+        }
+    } 
+}       

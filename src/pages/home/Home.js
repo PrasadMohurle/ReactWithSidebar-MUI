@@ -8,7 +8,7 @@ const Home = () => {
         <>
             <div className="home">
                 <div className="home-container">
-                    <h1 className='background-text'>HPCL</h1>
+                    <h1 className="background-text">HPCL</h1>
                     <img
                         className="home-img"
                         src={Oil_Pipeline}
@@ -18,12 +18,15 @@ const Home = () => {
                         <h1>Welcome to HPCL</h1>
                         <h4>Delivering Happiness, at every step...</h4>
                         <div className="action-buttons">
-                            <button className="login-btn">
-                                <Link to={"login"}>LOGIN</Link>
-                            </button>
-                            <button className="register-btn">
-                                <Link to={"register"}>REGISTER</Link>
-                            </button>
+                            <Link to={'login'}>
+                                <button className="login-btn">LOGIN</button>
+                            </Link>
+
+                            <Link to={'register'}>
+                                <button className="register-btn">
+                                    REGISTER
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

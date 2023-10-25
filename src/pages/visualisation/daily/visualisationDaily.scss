@@ -4,5 +4,10 @@
 
    .visualisationDaily-container{
     flex: 8;
+
+    .graph{
+        height: calc(100vh - 50px);
+        overflow-y: scroll;
+    }
    }
 }

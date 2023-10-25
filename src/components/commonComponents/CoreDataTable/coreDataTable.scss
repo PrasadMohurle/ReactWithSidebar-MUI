@@ -1,0 +1,79 @@
+.core-data-grid{
+    padding: 5px 20px;
+
+    .data-grid{
+        box-shadow: 2px 2px 5px rgb(213, 213, 213);
+    }
+
+    .MuiDataGrid-columnHeaders.MuiDataGrid-withBorderColor.css-1iyq7zh-MuiDataGrid-columnHeaders {
+        background-color: rgba(0, 0, 107, 0.3);
+    }
+
+    .cellWithImg{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .user-avatar{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid gray;
+        }
+    }
+
+    .cellWithRole{
+        padding: 5px;
+        border-radius: 5px;
+        width: 75px;
+        text-align: center;
+
+        &.Admin{
+            color: rgb(216, 85, 151);
+            background-color: rgba(251, 57, 154, 0.2);
+        }
+        &.Scheduler{
+            color: rgb(119, 0, 255);
+            background-color: rgba(162, 80, 255, 0.2);
+        }
+        &.Watcher{
+            color: rgb(255, 132, 0);
+            background-color: rgb(255, 132, 0, 0.2);
+        }
+    }
+
+    .cellWithAction{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        
+        .view-btn{
+            padding: 4px 8px;
+            border-radius: 5px;
+            color: blue;
+            border: 1px solid blue;
+            cursor: pointer;
+
+            &:hover{
+                color: white;
+                background-color: rgba(0, 0, 255, 0.7);
+                border: none;
+            }
+        }
+
+        .delete-btn{
+            padding: 4px 8px;
+            border-radius: 5px;
+            color: crimson;
+            border: 1px solid crimson;
+            cursor: pointer;
+
+            &:hover{
+                color: white;
+                background-color: rgba(220, 20, 60, 0.7);
+                border: none;
+            }
+        }
+    }
+}

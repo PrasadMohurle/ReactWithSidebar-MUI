@@ -11,6 +11,7 @@ import MailLockRoundedIcon from '@mui/icons-material/MailLockRounded';
 import ReportRoundedIcon from '@mui/icons-material/ReportRounded';
 import PermContactCalendarRoundedIcon from '@mui/icons-material/PermContactCalendarRounded';
 import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
+import GridOnIcon from '@mui/icons-material/GridOn';
 
 
 export const sidebarData = [
@@ -40,17 +41,17 @@ export const sidebarData = [
         {
           "icon": <ClassRoundedIcon/>,
           "text": "Plan",
-          "link": "#"
+          "link": "/dashboard/schedule/plan"
         },
         {
           "icon": <StyleRoundedIcon/>,
           "text": "Plan Version",
-          "link": "#"
+          "link": "/dashboard/schedule/plan_version"
         },
         {
           "icon": <ScheduleSendRoundedIcon/>,
           "text": "Run Schedule",
-          "link": "#"
+          "link": "/dashboard/schedule/run_schedule"
         }
       ]
     },
@@ -66,6 +67,11 @@ export const sidebarData = [
           "icon": <ScheduleRoundedIcon/>,
           "text": "Hourly",
           "link": "/dashboard/visualisation/hourly"
+        },
+        {
+          "icon": <GridOnIcon/>,
+          "text": "Excel Report",
+          "link": "/dashboard/visualisation/excel"
         },
         {
           "icon": <QueryStatsRoundedIcon/>,
